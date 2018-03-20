@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Content filter selectors - jQuery class</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1>:contains</h1>
+    <div>My name is Gustavo</div>
+    <div>I'm a computer science degree student</div>
+    <div>My name is Gustavo Olegário</div>
+
+    <hr/>
+    <h1>:empty</h1>
+    <div>I'm a div with content</div>
+    <div></div>
+    <div>Me too!</div>
+    <div></div>
+
+    <hr>
+    <h1>:has</h1>
+    <div>
+      I'm a div's content
+      <p>I'm a paragraph inside the div</p>
+    </div>
+    <div>
+      I'm a div without paragraph
+    </div>
+
+    <script>
+      jQuery(function(){
+        jQuery("div:contains('Gustavo')").css("border", "1px solid #444");
+        jQuery("div:empty").css("border", "1px solid red").html("Now, I'm not a empty div");
+        jQuery("div:has(p)").css("border", "2px solid blue")
+      });
+    </script>
+  </body>
+</html>
