@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hierarchy selectors</title>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+  <h1>("parent > child")</h1>
+  <div class="div-div">
+    <p>Sou um p 1 (filho da div que tem a classe .div-div)</p>
+    <p>Sou um p 2 (filho da div que tem a classe .div-div)</p>
+    <p>Sou um p 3 (filho da div que tem a classe .div-div)</p>
+    <div>
+      <p>Sou um p 4 (div.div-div > div)</p>
+    </div>
+    <span>Sou um span (filho da div que tem a classe .div-div)</span>
+    <strong>Sou um strong (filho da div que tem a classe .div-div)</strong>
+  </div>
+
+  <hr>
+  <h1>("ancestor descendant")</h1>
+  <div class="div2">
+    <p>Sou um p 1 (filho da div que tem a classe .div2)</p>
+    <p>Sou um p 2 (filho da div que tem a classe .div2)</p>
+    <p>Sou um p 3 (filho da div que tem a classe .div2)</p>
+    <div>
+      <p>Sou um p 4 (div.div2 > div)</p>
+    </div>
+    <span>Sou um span (filho da div que tem a classe .div2)</span>
+    <strong>Sou um strong (filho da div que tem a classe .div2)</strong>
+  </div>
+
+
+  <script>
+    jQuery(function(){
+      jQuery("div.div-div > p").css("color", "blue");
+      jQuery("div.div2 p").css("color", "blue");
+    });
+  </script>
+</body>
+</html>
