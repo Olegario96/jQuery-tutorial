@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Child selectors - jQuery class</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1>:first-child, :last-child</h1>
+    <div class="div-with-paragraphs">
+      <p>I'm the first p</p>
+      <p>I'm the second p</p>
+      <p>I'm the third p</p>
+      <p>I'm the fourth p</p>
+      <p>I'm the fifth and last p</p>
+    </div>
+
+    <hr/>
+    <h1>:first-of-type, :last-of-type</h1>
+    <div>
+      <span>I'm the first "span"</span><br/>
+      <span>I'm the second "span"</span><br/>
+      <span>I'm the third "span"</span><br/>
+      <span>I'm the fourth "span"</span><br/>
+      <span>I'm the fifth "span"</span><br/>
+    </div>
+
+    <hr/>
+    <h1>:nth-child, :nth-last-child</h1>
+    <div class="div-with-paragraphs2">
+      <p>I'm the first "p"</p>
+      <p>I'm the second "p"</p>
+      <p>I'm the third "p"</p>
+      <p>I'm the fourth "p"</p>
+      <p>I'm the fifth "p"</p>
+    </div>
+
+    <hr/>
+    <h1>:only-child</h1>
+    <div>
+      <strong>Ops, I'm the onlye "strong" child</strong>
+    </div>
+
+    <hr/>
+    <h1>:only-of-type</h1>
+    <div>
+      <p>Ops, I'm a "p" with different brothers</p>
+      <button>Ops, I'm the "button" with different brothers</button>
+      <strong>Ops, I'm the "strong" with different brothers</strong>
+    </div>
+
+    <script>
+      jQuery(function(){
+        jQuery("div.div-with-paragraphs p:first-child").css("border", "2px solid blue");
+        jQuery("div.div-with-paragraphs p:last-child").css("border", "2px solid blue");
+        jQuery("span:first-of-type").css("color", "red");
+        jQuery("span:last-of-type").css("color", "red");
+        jQuery("div.div-with-paragraphs2 p:nth-child(2)").css("border", "2px solid red");
+        jQuery("div.div-with-paragraphs2 p:nth-last-child(1)").css("border", "2px solid blue");
+        jQuery("div strong:only-child").css("border", "2px solid blue");
+        jQuery("div p:only-of-type").css("border", "2px solid yellow");
+      });
+    </script>
+  </body>
+</html>
