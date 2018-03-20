@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Loading events</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1 class="title">
+      Browser events [.error, .width, .height, .resize, .scroll]
+    </h1>
+
+    <div class="div-com-scroll" style="height: 150px">
+      <img src="../imgs/bad_motherfucker.jpg" alt="bad">
+      <div class="result"></div>
+    </div>
+
+    <div class="back-top" style="display: block; float: right; position: fixed; bottom: 0px; right: 0px; padding: 14px; margin: 10px; background: #C3C3C3; border-radius: 5px; cursor: pointer;" title="Back to the top">
+      <img src="./imgs/home.png" alt="home">
+    </div>
+
+    <script>
+      $(function(){
+        $("img").on("error", function(){
+          $(this).attr("src", "imgs/no-image.png");
+        });
+
+        $(window).resize(function(){
+          $("div.result").html("Width: "+$(window).width()+"px<br/>Height: "+$(window).width()+"px");
+        });
+
+        var back = $("div.back-top");
+        $(window).scroll(function(){
+          var top = $(window).scrollTop();
+          if (top >= 300){
+            back.show();
+          }else{
+            back.hide();
+          }
+        });
+
+        back.click(function() {
+          $("html, body").animate({scrollTop: "0"}, "slow");
+        });
+      });
+    </script>
+  </body>
+</html>
