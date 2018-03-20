@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Attribute selectors - jQuery class</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1>[name="value"], [name!="value"]:</h1>
+    <div id="test">I'm a div with id #test</div>
+    <div id="test1">I'm a div with id #test1</div>
+    <div id="test2">I'm a div with id #test2</div>
+    <div id="test3">I'm a div with id #test3</div>
+    <div id="test4">I'm a div with id #test4</div>
+
+    <hr/>
+    <h1>[name^="value"]:</h1>
+    <p name="specialization">"p" with name=specialization</p>
+    <p name="programming">"p" with name=programming</p>
+    <p name="spec">"p" with name=spec</p>
+
+    <hr/>
+    <h1>[name$="value"]:</h1>
+    <p name="php-course">"p" with name=php-course</p>
+    <p name="development">"p" with name=development</p>
+    <p name="ninja-php">"p" with name=ninja-php</p>
+
+    <hr/>
+    <h1>[name~="value"]:</h1>
+    <span name="spanclass">"span" with name=spanclass</span><br/>
+    <span name="span name">"span" with name=span name</span><br/>
+    <span name="spantext">"span" with name=spantext</span><br/>
+    <span name="span test">"span" with name=span test</span><br/>
+
+    <hr/>
+    <h1>[name|="value"]:</h1>
+    <span name="pt">"span" with name=pt</span><br/>
+    <span name="en">"span" with name=en</span><br/>
+    <span name="pt-br">"span" with name=pt-br</span><br/>
+    <span name="us">"span" with name=us</span><br/>
+
+    <hr/>
+    <h1>[name*="value"]:</h1>
+    <span name="searchkeytest">"span" with name=searchkeytest</span><br/>
+    <span name="any-span">"span" with name=any-span</span><br/>
+    <span name="key">"span" with name=key</span><br/>
+    <span name="newtest">"span" with name=newtest</span><br/>
+
+    <hr/>
+    <h1>Has attributes Selector[name]:</h1>
+    <span attribute="searchkeytest">"span" with attribute=searchkeytest</span><br/>
+    <span attribute="any-span">"span" with attribute=any-span</span><br/>
+    <span attribute="key">"span" with attribute=key</span><br/>
+    <span attribute="newtest">"span" with attribute=newtest</span><br/>
+
+    <script>
+      jQuery(function(){
+        jQuery("[id='test']").css("color", "red");
+        // jQuery("[id!='test']").css("color", "blue");
+
+        jQuery("[name^='spec']").css("color", "green");
+        jQuery("[name$='php'], [name$='course']").css("color", "blue");
+        jQuery("[name~='span']").css("color", "red");
+        jQuery("[name|='pt']").css("color", "blue");
+        jQuery("[name*='key']").css("color", "yellow");
+        jQuery("span[attribute]").css("color", "blue");
+      });
+    </script>
+  </body>
+</html>
