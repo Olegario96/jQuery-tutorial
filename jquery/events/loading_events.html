@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Loading events</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1 class="title">
+      Loading events [.ready, .load]
+    </h1>
+    <img src="/home/olegario/Pictures/IMG-20170830-WA0007.jpg" alt="Olegario" class="img-profile">
+    <a href="https://github.com/Olegario96">GitHub</a>
+
+    <script>
+      $(function(){
+        $("img").on("load", function(){
+          alert("All images had been loaded.");
+        });
+      });
+
+      // $(window).on('load', function(){
+      //   alert("Everything was loaded.");
+      // });
+    </script>
+  </body>
+</html>
