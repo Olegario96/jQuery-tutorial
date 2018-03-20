@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Basic selectors - jQuery class</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1>*, .class, #id, ["element"]:</h1>
+    <div>I'm a div</div>
+    <p class="paragraph">I'm a 'p' with class .paragraph</p>
+    <p id="paragraph">I'm a 'p' with ID #paragraph</p>
+    <span>I'm a span(1)</span><br/>
+    <span>I'm a span(2)</span><br/>
+    <span>I'm a span(3)</span><br/>
+
+    <hr>
+    <h1>Multiple Selector:</h1>
+    <p class="class1">'p' with .class1</p>
+    <p class="class2">'p' with .class2</p>
+    <p class="class3">'p' with .class3</p>
+
+    <script>
+      jQuery(function(){
+        // jQuery("*").css("color", "#999");
+        jQuery("p.paragraph")
+          .css("color", "red")
+          .css("border", "2px solid red")
+          .click(function(event) {
+            alert('User clicked on element with class paragraph.');
+          });
+
+        jQuery("#paragraph").css({"color": "blue", "border": "2px solid blue"});
+        jQuery("span").css("color", "green");
+        jQuery(".class1, .class2, .class3").css("color", "yellow");
+      });
+    </script>
+  </body>
+</html>
