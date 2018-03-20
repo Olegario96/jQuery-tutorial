@@ -1,2 +1,2 @@
 # jQuery-tutorial
-Lerning jQuery at lightning spped
+Learning jQuery at lightning spped

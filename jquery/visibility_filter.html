@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Visibility filter - Curso jQuery Samurai EspecializaTi</title>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+  <h1>:visible</h1>
+  <div style="display:none;">Sou uma div oculta</div>
+  <div>Sou uma div visível</div>
+  <div>Sou outra div visível</div>
+  <div style="display:none;">Sou outra div oculta</div>
+
+  <hr>
+  <h1>:hidden</h1>
+  <p style="display:none;">Sou um p oculto</p>
+  <p>Sou um p visível</p>
+  <p>Sou outra p visível</p>
+  <p style="display:none;">Sou outra p oculto</p>
+
+
+  <script>
+    jQuery(function(){
+      jQuery("div:visible").css("color", "red");
+      jQuery("p:hidden").css({"border": "2px solid red", "padding": "20px", "display": "block"}).show(3000);
+    });
+  </script>
+</body>
+</html>
