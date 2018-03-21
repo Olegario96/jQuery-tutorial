@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Efeitos Desvanecimento - Curso jQuery Samurai EspecializaTi</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <h1 class="title">
+      Efeitos Desvanecimento [fadeIn, fadeOut, fadeTo]
+    </h1>
+
+    <div>
+      <span class="fadein">fadeIn</span>
+      <span class="fadeout">fadeOut</span>
+      <span class="fadeto">fadeTo</span>
+
+      <div class="resultado">
+        Div que será aplicado os efeitos
+      </div>
+    </div>
+
+    <script>
+      $(function() {
+        $(".fadeout").click(function() {
+          $(".resultado").fadeOut("sleep");
+        });
+
+        $(".fadein").click(function() {
+          $(".resultado").fadeIn("sleep");
+        });
+
+        $(".fadeto").click(function() {
+          $(".resultado").fadeTo("sleep", 0.8);
+        });
+
+        $(".fadeto").dblclick(function() {
+          $(".resultado").fadeTo("sleep", 0.4);
+        });
+      })
+    </script>
+  </body>
+</html>
