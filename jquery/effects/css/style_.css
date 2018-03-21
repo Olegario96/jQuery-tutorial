@@ -1,0 +1,56 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.content{
+  z-index: 0;
+  position: absolute;
+
+}
+
+.modal-content{
+  background: #ccc;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  position: absolute;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.modal{
+  width: 600px;
+  padding: 50px 30px;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -100px;
+  background: #FFF;
+  border-radius: 4px;
+  opacity: 1 !important;
+  z-index: 20;
+  position: absolute;
+}
+
+.close-modal{
+  width: 15px;
+  float: right;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+  z-index: 30;
+  cursor: pointer;
+}
+
+.modal-header{
+  text-align: center;
+}
+
+.modal-title{
+
+}
+
+.modal-body{
+
+}

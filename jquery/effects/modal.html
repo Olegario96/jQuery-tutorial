@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery Modal</title>
+    <link rel="stylesheet" href="css/style_.css">
+  </head>
+  <body>
+    <div class="content">
+      <a href="#" class="show-modal">Hello, there!</a>
+    </div>
+    <div class="modal-content" style="display: none">
+      <div class="modal">
+        <img src="imgs/close.png" class="close-modal" alt="Close [X]">
+        <div class="modal-header">
+          <h1 class="modal-title">Modal title</h1>
+        </div>
+        <div class="modal-body">
+          Modal body
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </body>
+  <script>
+    $(function(){
+      $(".show-modal").click(function(){
+        // alert("General Kenobi");
+        $(".modal-content").fadeIn("sleep");
+        return false;
+      });
+
+      $(".close-modal").click(function() {
+        $(".modal-content").fadeOut("sleep");
+        return false;
+      });
+    });
+  </script>
+</html>
